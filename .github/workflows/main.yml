@@ -39,9 +39,9 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
 
       - name: Step 5 - Persist workflow data as artifacts
-        uses: actions/upload-artifacts@v2
+        uses: actions/upload-artifact@v2
         with:
-          name: github-actions-artifacts
+          name: github-actions-artifact
           path: staging
 
 
