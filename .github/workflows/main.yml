@@ -33,7 +33,7 @@ jobs:
         run: actions/cache@v2
         with:
           path: ~/.m2
-          key: ${{ runners.os }}-m2-${{ hashfiles('**/pom.xml') }}
+          key: ${{ runners.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runners.os }}-m2
 
       - name: Step 4 - List the environment variables
