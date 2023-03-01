@@ -30,7 +30,7 @@ jobs:
         run: mvn -B package --file pom.xml
 
       - name: Step 4 - Set up a cache for Maven
-        run: actions/cache@v2
+        uses: actions/cache@v2
         with:
           path: ~/.m2
           key: ${{ runners.os }}-m2-${{ hashFiles('**/pom.xml') }}
